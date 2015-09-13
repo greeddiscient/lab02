@@ -11,6 +11,19 @@ public class CheckDigit {
 
         boolean isLegal = true;
         // TODO Your code here
+        int lastnum= id%10;
+        int digits [];
+        while (id> 10){
+        	id= id/10;
+        	
+        }
+        
+        
+        
+        
+        
+        
+        
         if (isLegal) {
             System.out.println (id + " is legal");
         } else {
