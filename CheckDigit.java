@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class CheckDigit {
 
     public static void main (String [ ] args) {
@@ -12,22 +14,34 @@ public class CheckDigit {
         boolean isLegal = true;
         // TODO Your code here
         int lastnum= id%10;
-        int digits [];
+        String s= Integer.toString(id);
+        List<Integer> digits= new ArrayList<Integer>();
+
+        
+        
         while (id> 10){
         	id= id/10;
+        	digits.add(id%10);       	
+        }
+        int sum=0;
+        for (int i : digits){
+        	sum+=i;
+        }
+        if (sum%10== lastnum){
+        	isLegal=true;
         	
+        }
+        else{
+        	isLegal=false;
         }
         
         
         
         
-        
-        
-        
         if (isLegal) {
-            System.out.println (id + " is legal");
+            System.out.println (s + " is legal");
         } else {
-            System.out.println (id + " is not legal");
+            System.out.println (s + " is not legal");
         }
     }
 
